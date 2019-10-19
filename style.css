@@ -33,4 +33,7 @@
       height: 600px;
       background-color: #fafad2;
     }
-
+    
+    * {
+        background-color: yellow;
+    }
