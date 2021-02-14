@@ -1,36 +1,46 @@
-   
-    button {
-      background-color: green;
-      color: white;
-      border: none;
-      bottom: 0;
-      height: 30px;
-      font-size: 12pt;
-      width: 90px;
-      margin: 10px 0 0 0;
-    }
-    button:hover {
-      background-color: orange;
-    }
+.game {
+	margin: 0 auto;
+	text-align: center;
+}
 
-    button:disabled {
-      background-color: grey;
-    }
+.header {
+	margin: 4rem auto;
+}
 
-    p {
-      font-family: Helvetica;
-      font-weight: bold;
-      width: 250px;
-      margin: 18px 0 5px 8px;
-    }
+.header > h1 {
+	margin: 0rem auto 2rem;
+}
+button {
+	background-color: rgb(128, 0, 0);
+	color: white;
+	border: 1px solid black;
+	border-radius: 5px;
+	height: 30px;
+	font-size: 12px;
+	width: 90px;
+	margin: 10px 0;
+}
+button:hover {
+	background-color: rgb(43, 131, 2);
+}
 
-    .game {
-      margin: 0 auto;
-      text-align: center;
-    }
-    #canvas{
-      width: 600px;
-      height: 600px;
-      background-color: yellow;
-    }
+button:disabled {
+	background-color: grey;
+}
+
+p {
+	font-family: Helvetica;
+	font-weight: bold;
+	margin: 18px 0 5px 8px;
+}
+
+p img {
+	vertical-align: middle;
+}
+
+#canvas{
+	width: 600px;
+	height: 600px;
+	background-color: rgb(230, 247, 211);
+}
 
