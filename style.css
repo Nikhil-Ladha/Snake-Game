@@ -1,3 +1,18 @@
+body {
+	background:linear-gradient(0deg, rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.6)), url(./assets/images/game_bg.jpg);
+	background-size: cover;
+	background-attachment: fixed;
+}
+
+p {
+	font-family: monospace;
+	font-weight: 600;
+}
+
+p img {
+	vertical-align: middle;
+}
+
 .game {
 	margin: 0 auto;
 	text-align: center;
@@ -5,42 +20,238 @@
 
 .header {
 	margin: 4rem auto;
+	color: wheat;
 }
 
 .header > h1 {
 	margin: 0rem auto 2rem;
-}
-button {
-	background-color: rgb(128, 0, 0);
-	color: white;
-	border: 1px solid black;
-	border-radius: 5px;
-	height: 30px;
-	font-size: 12px;
-	width: 90px;
-	margin: 10px 0;
-}
-button:hover {
-	background-color: rgb(43, 131, 2);
+	font-size: 3rem;
 }
 
-button:disabled {
-	background-color: grey;
-}
-
-p {
-	font-family: Helvetica;
-	font-weight: bold;
-	margin: 18px 0 5px 8px;
-}
-
-p img {
+.snakeImg {
+	width: 100px;
+	height: 120px;
 	vertical-align: middle;
 }
 
-#canvas{
-	width: 600px;
-	height: 600px;
-	background-color: rgb(230, 247, 211);
+.header > h2 {
+	margin: 1rem auto 0.5rem;
+	font-size: 1.75rem;
 }
 
+.gameRule {
+	width: 70%;
+	margin: auto;
+	font-size: 1.25rem;
+}
+
+.snakeColor {
+	color: green;
+}
+
+.snakeHeadColor {
+	color: red;
+}
+
+.wallColor {
+	color: rgb(56, 28, 11);
+}
+
+.gameOvr {
+	margin: 0;
+	font-size: 1.6rem;
+	font-weight: bold;
+	color: #231b03;
+}
+
+.reportButton {
+	display: flex;
+    margin-left: 2rem;
+}
+
+.reportIsue {
+	background-color: rgb(247 208 67);
+    color: black;
+    border: 1px solid black;
+    border-radius: 5px;
+    font-size: 1.25rem;
+    margin: 10px 0;
+    padding: 0.5rem;
+	transition: all 0.3s;
+}
+
+.reportIsue:hover {
+	background-color: rgb(120 167 44);
+	color: white;
+	box-shadow: 0px 2px 10px 0px rgba(0,0,0, 0.5);
+}
+
+.github {
+	width: 30px;
+	height: 28px;
+	vertical-align: middle;
+}
+
+.canvas-controls {
+	display: flex;
+}
+
+.levelheader {
+	color: wheat;
+	text-align: center;
+	margin: 1rem auto;
+	font-size: 2rem;
+}
+
+.levelButtons {
+	display: flex;
+	flex: auto;
+	flex-wrap: wrap;
+	justify-content: center;
+	margin: 2rem auto 5rem;
+}
+
+.lvlBtn {
+	background-color: rgb(247 208 67);
+    color: black;
+    font-weight: 600;
+    font-size: 1rem;
+    width: 8rem;
+	height: 2.5rem;
+	margin: 0 2rem 0.5rem;
+	transition: all 0.3s;
+}
+
+.lvlBtn:hover {
+	cursor: pointer;
+	background-color: rgb(117 92 46);
+	color: white;
+	border-radius: 6px;
+	box-shadow: 0px 2px 10px 0px rgba(0,0,0, 0.5);
+}
+
+.lvlBtn:disabled {
+	background-color: grey;
+	color: white;
+    border-radius: 6px;
+    box-shadow: 0px 2px 10px 0px rgb(0 0 0 / 50%);
+}
+
+.morLvl {
+	height: 4rem;
+	background-color: grey;
+    color: white;
+    font-weight: 600;
+    font-size: 1rem;
+    width: 12rem;
+	margin: 0.75rem auto;
+}
+
+.controls-section {
+	flex: 0 0 25%;
+	margin-left: 1.5rem;
+	margin-right: -1.5rem;
+}
+
+.controlheader {
+	font-size: 1.5rem;
+	text-align: left;
+	color: wheat;
+	margin-bottom: 0.5rem;;
+}
+
+.controls-section > ul {
+	text-align: left;
+	font-size: 1.5rem;
+	color: wheat;
+	margin-top: 0.5rem;
+	padding-left: 2rem;
+}
+
+.control {
+	color: white;
+}
+
+.instrctn {
+	position: absolute;
+	width: 27%;
+	margin: auto;
+    left: 25%;
+    right: 0;
+	font-size: 1.25rem;
+}
+
+#instrctnHead {
+	display: none;
+	font-size: 1.85rem;
+	border-bottom: 2px solid;
+    width: 20rem;
+	margin: 4rem auto;
+}
+
+#aboutSection {
+	margin: 3rem auto;
+	font-size: 2rem;
+}
+
+#timertxt {
+	display: none;
+	font-size: 1.5rem;
+}
+
+#gmeOvr {
+	display: none;
+	font-size: 4rem;
+    color: red;
+	margin-top: 10rem;
+	animation: sinkin 0.18s;
+}
+
+@keyframes sinkin {
+	0% {
+		transform: scale(2.5);
+	}
+	33% {
+		transform: scale(2);
+	}
+	66% {
+		transform: scale(1.5);
+	}
+	100% {
+		transform: scale(1);
+	}
+  }
+
+#scoreTxt {
+	display: none;
+	font-size: 2.5rem;
+    color: green;
+}
+
+#plyAgain {
+	display: none;
+	background-color: rgb(247 208 67);
+    color: black;
+    border: 1px solid black;
+    border-radius: 5px;
+    font-size: 1.25rem;
+    margin: 1rem auto;
+    padding: 0.5rem;
+	transition: all 0.3s;
+}
+
+#plyAgain:hover {
+	cursor: pointer;
+	box-shadow: 0px 2px 10px 0px rgba(0,0,0, 0.5);
+}
+
+#canvas{
+	width: 900px;
+	height: 600px;
+	background-color: rgb(230, 247, 211);
+	border: 5px solid rgb(56, 28, 11);
+}
+
+.canvas {
+	flex: 0 0 75%;
+}
