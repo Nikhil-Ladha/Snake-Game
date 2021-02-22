@@ -286,6 +286,6 @@ function beginGame(element) {
     chseLvl.style.display = "none"
 
     let timer = document.getElementById("timer")
-    countdownTimer(2, timer, aboutHead, about, timerTxt)
-    setTimeout(start, 3000, levelId)
+    countdownTimer(9, timer, aboutHead, about, timerTxt)
+    setTimeout(start, 10000, levelId)
 }
