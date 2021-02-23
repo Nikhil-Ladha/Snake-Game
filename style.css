@@ -148,7 +148,7 @@ p img {
 }
 
 .controls-section {
-	flex: 0 0 25%;
+	flex: 0 0 27%;
 	margin-left: 1.5rem;
 	margin-right: -1.5rem;
 }
@@ -204,18 +204,24 @@ p img {
 	font-size: 4rem;
     color: red;
 	margin-top: 10rem;
-	animation: sinkin 0.18s;
+	animation: sinkin 0.25s;
 }
 
 @keyframes sinkin {
 	0% {
 		transform: scale(2.5);
 	}
-	33% {
+	20% {
 		transform: scale(2);
 	}
-	66% {
+	40% {
 		transform: scale(1.5);
+	}
+	60% {
+		transform: scale(1);
+	}
+	80% {
+		transform: scale(0.75);
 	}
 	100% {
 		transform: scale(1);
@@ -253,5 +259,5 @@ p img {
 }
 
 .canvas {
-	flex: 0 0 75%;
+	flex: 0 0 73%;
 }

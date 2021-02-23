@@ -7,6 +7,7 @@ const w = 900
 const h = 600
 var snake
 var score = 0
+var speed = 150
 var food, tail, snakeX, snakeY
 const levlDesc = [
     "Eat as many Rat's as possible and keep growing, but beware of eating the snake's body! You can go though the walls in this level, and we won't eliminate you :)",
@@ -68,7 +69,6 @@ function paint(btnId) {
                         ctx.fillStyle = "#e6f7d3"
                         ctx.fillRect(w-115, 0, 115, 60)
 
-                        clearInterval(loop)
                         gameOvr()
                         return
                     }
@@ -91,7 +91,6 @@ function paint(btnId) {
                         ctx.fillStyle = "#e6f7d3"
                         ctx.fillRect(w-115, 0, 115, 60)
 
-                        clearInterval(loop)
                         gameOvr()
                         return
                     }
@@ -120,6 +119,9 @@ function paint(btnId) {
 
     // Print score
     scoreText()
+
+    // Controls speed, by changing the time in which the canvas is painted again
+    setTimeout(paint, increaseSpeed(), btnId)
 }
 
 // Create food at random location within the canvas
@@ -153,42 +155,61 @@ function checkCollision(x, y, array) {
     return false
 }
 
+// Update speed with score
+
+function increaseSpeed() {
+
+    let newSpeed = speed - 3.5 * score
+    if (newSpeed > 50)
+        return newSpeed
+    
+    return 50
+}
+
 
 // Start game function
 
 function start(btnId) {
 
-    direction = 'down';
-    drawSnake();
-    createFood();
-    loop=setInterval(paint,80, btnId);
+    direction = 'down'
+    drawSnake()
+    createFood()
+    paint(btnId)
 
     document.onkeydown = function(event) {
         keyCode = event.code || event.key
 
         switch(keyCode) {
             case 'KeyA':
-            case 'Numpad4': 
+            case 'Numpad4':
+            case 'ArrowLeft':
                 if (direction != 'right')
                     direction = 'left'
+                    event.preventDefault()
                 break
 
             case 'KeyD':
             case 'Numpad6':
+            case 'ArrowRight':
                 if (direction != 'left')
                     direction = 'right'
+                    event.preventDefault()
                 break
 
             case 'KeyW':
             case 'Numpad8':
+            case 'ArrowUp':
                 if (direction != 'down')
                     direction = 'up'
+                    event.preventDefault()
                 break
 
             case 'KeyS':
             case 'Numpad2':
+            case 'ArrowDown':
                 if (direction != 'up')
                     direction = 'down'
+                    event.preventDefault()
                 break
         }
     }
