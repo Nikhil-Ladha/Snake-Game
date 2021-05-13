@@ -1,5 +1,5 @@
 body {
-	background:linear-gradient(0deg, rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.6)), url(./assets/images/game_bg.jpg);
+	background:linear-gradient(0deg, rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.8)), url(./assets/images/game_bg.jpg);
 	background-size: cover;
 	background-attachment: fixed;
 }
@@ -61,12 +61,16 @@ p img {
 	margin: 0;
 	font-size: 1.6rem;
 	font-weight: bold;
-	color: #231b03;
+	color: #ffcb2e;
+}
+
+.report-link {
+	margin-left: 2rem;
 }
 
 .reportButton {
 	display: flex;
-    margin-left: 2rem;
+	width: 100%;
 }
 
 .reportIsue {
@@ -81,9 +85,31 @@ p img {
 }
 
 .reportIsue:hover {
+	cursor: pointer;
 	background-color: rgb(120 167 44);
 	color: white;
 	box-shadow: 0px 2px 10px 0px rgba(0,0,0, 0.5);
+}
+
+.start-link {
+	color: wheat;;
+	display: flex;
+	flex: auto;
+	font-size: 18px;
+	justify-content: flex-end;
+	margin-right: 2rem;
+	align-items: center;
+}
+
+.start-link a {
+	text-decoration: none;
+	color: wheat;
+	margin-left: 5px;
+}
+
+.start-link img {
+	width: 30px;
+	margin-bottom: 3px;
 }
 
 .github {
@@ -255,7 +281,6 @@ p img {
 	width: 900px;
 	height: 600px;
 	background-color: rgb(230, 247, 211);
-	border: 5px solid rgb(56, 28, 11);
 }
 
 .canvas {
