@@ -1,5 +1,5 @@
 # Snake-Game
-It is the ancient Snake game developed using HTML, CSS and JavaScript only.
+It is a anake game developed using HTML Canvas.
 
 To play the game, simply clone the repo and open the `index.html` file in your browser (DESKTOP ONLY). VOILA! You can start playing your game....
 
